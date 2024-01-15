@@ -2,6 +2,8 @@
 // https://nextjs.org/learn/dashboard-app/fetching-data
 
 // Each object in this file represents a table in your database
+
+// USERS TABLE
 const users = [
   {
     id: '410544b2-4001-4271-9855-fec4b6a6442a',
@@ -11,6 +13,7 @@ const users = [
   },
 ];
 
+// CUSTOMERS TABLE
 const customers = [
   {
     id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
@@ -74,6 +77,8 @@ const customers = [
   },
 ];
 
+// INVOICES TABLE
+// Each customer may have multiple invoices, it is a one-to-many relationship.
 const invoices = [
   {
     customer_id: customers[0].id,
@@ -167,6 +172,7 @@ const invoices = [
   },
 ];
 
+// REVENUE TABLE
 const revenue = [
   { month: 'Jan', revenue: 2000 },
   { month: 'Feb', revenue: 1800 },
