@@ -1,3 +1,4 @@
+// Importing the 'sql' function from Vercel Postgres SDK.
 import { sql } from '@vercel/postgres';
 import {
   CustomerField,
@@ -34,6 +35,7 @@ export async function fetchRevenue() {
 
 export async function fetchLatestInvoices() {
   try {
+    // Fetch the latest 5 invoices from the database, sorted by date through SQL.
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
       FROM invoices
