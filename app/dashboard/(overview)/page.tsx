@@ -22,7 +22,7 @@ export default async function Page() {
        parts of the route, while embedding the fallback of React's Suspense at build time. When the
        user requests the route, Next.js renders the static content and leaves holes where dynamic
        content will load in asynchronously, these holes are streamed in parallel, reducing the
-       overall load time of the page. When it finishes loading, it gets to fill these holes. */}
+       overall load time of the page. The fallback of Suspense fills them while the content loads. */}
       <h1 className={`${sora.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
