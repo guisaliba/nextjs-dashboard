@@ -14,6 +14,15 @@ which receive data: <Card>, <RevenueChart> and <LatestInvoices>. */
 export default async function Page() {
   return (
     <main>
+      {/* In this 'dashboard' component, the <SideNav /> isn't dynamic while everything else is.
+       This entire route and every component on it became dynamic when we used a dynamic function
+       on it, in that case, the 'noStore()' function from the data fetch of these dynamic content.
+       Next.js 14 implements Partial Prerendering, a way to combine static and dynamic content
+       without enforcing the entire route to be dynamic. Partial Prerendering prerenders the static 
+       parts of the route, while embedding the fallback of React's Suspense at build time. When the
+       user requests the route, Next.js renders the static content and leaves holes where dynamic
+       content will load in asynchronously, these holes are streamed in parallel, reducing the
+       overall load time of the page. When it finishes loading, it gets to fill these holes. */}
       <h1 className={`${sora.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
