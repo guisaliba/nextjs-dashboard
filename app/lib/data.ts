@@ -32,8 +32,8 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    // 'fetchRevenue()' will take 5 seconds to complete.
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // 'fetchRevenue()' will take 3 seconds to complete.
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -51,8 +51,8 @@ export async function fetchLatestInvoices() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    // 'fetchLatestInvoices()' will take 3 seconds to complete.
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // 'fetchLatestInvoices()' will take 2 seconds to complete.
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // Fetch the latest 5 invoices from the database, sorted by date through SQL.
     const data = await sql<LatestInvoiceRaw>`
