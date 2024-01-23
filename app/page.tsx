@@ -18,7 +18,7 @@ export default function Page() {
           {/* Another way to style components is with CSS Modules. They allow you to write vanilla CSS syntax in 
           other files (e.g. 'file.css.module') then import it into your component (import styles from 'file.css.module';)
           and style them with 'className={styles.something}' where 'something' is the class you've created and styled.
-          CSS Modules create unique class names for each component, so you don't have to worry about style collisions. */}
+          CSS Modules create unique class names for each component, so you don't have to worry about style collisions! */}
           <div className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-black border-l-transparent border-r-transparent"></div>
 
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
